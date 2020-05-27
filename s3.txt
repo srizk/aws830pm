@@ -1,0 +1,94 @@
+S3 : Simple Storage Service : 
+
+--> Object based storage : Designed to store flat data : S3
+--> Block based storage : Designed to run OS : EC2 (EBS, Instance store)
+--> Network based storage : Network attached storage : EFS , FSx
+
+--> S3 is an object based storage.
+--> We can store all flat files.
+--> We cannot install any application / we cannot run any application.
+--> S3 have unlimited storage.
+--> No Pre-Provisioning required. (Pay-as-you-go)
+
+FreeTier : 5 Gb Standard storage, 2000 PUT (upload) , 20,000 GET (Download).. Reset monthly basis..
+*Practice with small docs.. pdf/notepad/images.. 
+
+--> We store all objects in "buckets".
+--> Softlimit on s3 : 100 Buckets.. We can raise tiket to aws to increase the bucket count..
+--> Bucket = Folder/Dire.. With unique namespace.
+
+Bucket Naming Limits: 
+--> bucket names unique across the globe.
+--> Min char 3 char.. Max 63 char..
+--> No capital letters and special characters.
+--> bucket name should not resemble IP address format. (Static website)
+--> Name should not start with .  , should not end with . , no adjesent ..
+
+.avinash
+avinash.
+avi..name
+192.168.100.1
+
+--> Within buckts we upload objects. 
+--> We can have unlimited objects in a bucket.
+--> Max object size s3 supports : 5 TB.. 
+--> We will get a unique URL for every object. 
+
+Object URL syntax : 
+Standard S3 Path:
+https://s3.regionname.amazonaws.com/bucketname/objectname
+
+Virtual path: (If we have . in bucket name below URL's wont work)
+https://bucketname.s3.ap-south-1.amazonaws.com/objectname
+https://bucketname.s3.amazonaws.com/objectname
+
+
+--> We need to Open "Public Access settings" bucket level.
+--> make object Public, Then the URLs works.
+
+S3 Storage Class: 
+
+Based on storage classes, We have Avilability and Durability. 
+
+
+usecase :
+
+Accessing Frequently 	: S3-Standard 
+InFrequently accsses 	: S3 Standard-IA / OneZone-IA
+Archieve 		: S3 Glacier / Glacier Deep Archieve
+Non Mission critical data : RRS (Reduced Redundancy storage) : Not Recommanded
+Don't know the access patterns : Intelligent Tiering
+
+
+In-House : Hospital : 6-7 doctors --> Inspect the record.. : Many times /day
+Heart ==> Visit at any time ==> Data needs immediately, are we accseing daily..?? 
+OP : Regular ill ==> He needs prior appointment (24 Hrs) ==> Restore data (3-5 Min) (3-5 Hrs) 12-24 hrs
+RRS : Logs / Thumbnails : costlier than Standrd X
+Data : 
+		Availability		Durability		AZs	Restore Duration
+
+S3-Standard : 99.99% Avilability, 99.999999999 % Durability.. 	>=3 AZs
+S3-Standrd IA : 99.9% Avi, 	  99.999999999 % Durability..	>=3 AZs
+OneZone-IA   : 99.5% Avi, 	  99.999999999 % Durability..	1 AZs
+S3 Glacier  : 99.99% Avilability, 99.999999999 % Durability.. 	>=3 AZs    (/min - /Hr)
+G Deep Archi : 99.99% Avilability, 99.999999999 % Durability.. 	>=3 AZs    (/Hr)
+Interlligent tier : 99.9% Avi, 	  99.999999999 % Durability..	>=3 AZs
+
+RRS : 		99.99%		99.99%				>=3 AZ
+
+
+Glacier Restore options: 
+Bulk retrieval : Typically within 5-12 hours
+Standard retrieval : Typically within 3 - 5 hours
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+
+
+
+
+
+
+
+
+
+
