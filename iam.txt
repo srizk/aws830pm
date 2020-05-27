@@ -1,0 +1,117 @@
+Login to AWS account using Email ID : root : Full COntrol on your aws account.. 
+Email and Password --> 2 Factor Auth.. 
+
+Enable MFA as a first step.. 
+
+Virtual MFA : Smartphones.. 
+Hardware MFA : A hardware.. 
+U2F key : Hardware.. 
+
+
+IAM : Identity and Access Managment : We can manage users / groups, we can limit the access based on Job role/task/requirement..
+
+Policy : Writtens in JSON format.. Set of permissions on AWS Account.. 
+
+S3 : Avinash : Manages s3.. Attach a Policy (S3FullAccess).. He can access only S3.. 
+ec2 : Anudeep (2 users) : Manages ec2.. Attach a Policy (ec2FullAccess).. He can access only ec2.. 
+TL : Aravind : Team Lead : AdministratorAccess : Access on all aws services.. 
+
+
+Step 1 : Define username
+
+Step 2 : Choose the Access Type
+
+-> AWS Management console access : GUI : Username, Pwd & Sign-In --> Browser..
+-> Programatic Access : CLI : AccessKeyID & SecretAcesskey --> CLI tools, SDK, API calls, 								3rd party apps.. 
+
+Step 3 : Set Permissions..
+
+--> Groups
+--> Copy permissions
+--> Attach manually
+
+Step 4 : Add Tags
+Step 5 : Review and create IAM user. 
+
+
+
+
+Task : Create MFA on your root account.
+
+Task 2 : Create an IAM User, Provide AdministratorAccess, and try to access Billing Dashboard.. 
+--> provide Billing access to Task 2 user..!!
+
+Task 3 : Create multiple IAM users, get familer with IAM options. 
+
+______________________________________________________________________________________
+
+D: 26/05/2020
+
+Policies: 
+
+AWS managed policy :
+AWS Managed policy - Job Function : 
+
+AdministratorAccess : Provides full access to AWS services and resources.
+PowerUserAccess : Provides full access to AWS services and resources, but does not allow management of Users and groups.
+DatabaseAdministrator : Grants full access permissions to AWS services and actions required to set up and configure AWS database services.
+
+Customer Managed : 
+
+Req: User with Admin access but not on s3..
+
+DenyS3 : 
+
+
+IAM : Administrator --> Everything - s3 denys3  ==> DENY
+
+IAM : EC2 fullaccess --> if he tried to access s3 ==> DENY
+
+Implicit Allow : 
+Explicit Deny : 
+
+Deny means DENY.. How many layers you allow, any layer if we have DENY ==> DENY
+
+Policy Simulator : Test the accesslevels/permissions of a user if he cotains multiple policies associated.
+
+Inline Policy : Policy for One service/role. (Will discuss along with roles)
+
+
+Credentials Report : When user crated, Pwd expire, last logged in.. 
+
+ARN : Amazon Resource Name : 
+
+CloudTrail : Logging service on AWS, Defaultly enabled.. It stores last 90 days logs.. 
+
+
+programatic access and Roles : ec2 sessions
+
+Install Aws cli tools in your laptop : aws.amazon.com/cli
+
+
+
+Task 1 : Create a Policy to deny access on ec2 and s3. 
+
+Task 2 : Create an IAM user, add Administrator Access, add task 1 policy also.. --> Test his access on S3 / ec2 / iam. 
+
+Task 3 : Add Poweruser access, S3FullAccess to the Task 2 user.. and use Policy Simulator to understand why he is not able to access s3 / ec2. 
+
+Task 4 : Create a user with permission boundary on IAM. Add "Administrator Access" .. Now test his access on s3. 
+
+Task 5 : Allow IAM users to Activate MFA himself.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

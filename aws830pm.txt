@@ -1,0 +1,268 @@
+Capital Expendature : Building House : Full Upfront :  100% amount : 
+Operation Expendature : water/ power/ property.. 
+
+Cloud computing : AWS, Azure, GCP, Rackspace, Fujitsu, orcle cloud, alibaba
+
+
+Email Server : 
+
+web Servers  : 10000 Customers  : 12 CPU, 32 GB RAM, 1 TB HDD.. 
+Database server
+firewall 
+24x7 --> power / redundant power supply
+cooling
+Physical security
+
+Gmail : 
+O365  : 
+
+GDrive : 15 GB Storage : 
+
+Pay-as-you-go : Whatever the resources we are using, we just need to pay for that.. /sec.. /hr... 
+
+Pay-as-you-grow : 1 day --> (1cpu, 512 ram) : 2 day --> 2cpu, 4gb
+
+NIST : 
+
+
+Public Cloud
+private CLoud
+
+PaaS
+SaaS
+IaaS
+
+____________________________________________________________________________________
+
+74th Batch : 
+
+
+Do we need learn Linux : Yes.. 2 Sessions on Linux..  A free Linux course : Basic operations : 
+
+Do we need to have any programing experience : NO.. 
+--> AWS Developer : YES..  node.js/Python/go/.netcore/ JSON.. Java/.net.. Lambda & Cloudfromation
+
+No Work experinece required to learn AWS : NoVoice : 
+
+BigData 	: AWS + EMR
+Network Admin 	: AWS
+Storage Admin 	: S3, EFS, FSx
+DBA 		: RDS
+
+IAM + S3 + EC2 + Route53 + VPC + RDS + Application + Security service + Hybdrid + DevOps
+
+DevOps : Cluture : Automates : AWS have it's tools : A Free DevOps course : 
+
+ECS : Elastic COntainer Service : 
+
+_______________________________________________________________________________________
+D: 20/05/2020
+
+
+Deployment Models : 
+
+Public Cloud : Open for all.. Maintenance : Service Provider.. Ex: AWS, Azure, GCP..  
+
+Private Cloud : One organisation.. Main : Same Org/3rd party org.. Ex: Many.. On-Premise
+
+Hybrid Cloud : AWS (web server) + Azure (MSSQL) / OnPremise + AWS / Priv+priv: 
+VPN, AWS Direct Connect, AWS Storage Gateway, AWS DataSync..
+
+Community Cloud : Group of organizations.. 
+
+
+Service Models of CC : 
+
+Traditional: 
+
+Application
+Data
+Runtime
+Middleware
+Operating System
+Virtualisation
+Server
+Database
+Storage
+Network
+
+SaaS : 
+PaaS : 
+IaaS : 
+
+______________________________________________________________________________________
+
+D: 21/05/2020
+
+
+IaaS : 
+PaaS : 
+SaaS : 
+
+Iam : Users / Users management in AWS
+S3 : Simple Storage Service : Aws version of Gdrive . : task		
+EC2 : Elastic Compute Cloud : Servers / VMs = Instances : task		
+Route53: Hosting : Domain Name, How we can map domain to ELB/instance.
+VPC : Networking : 
+RDS : Database : Mysql, Mssql, Amazon aurora.. Dynamodb.. Redshift (DW).. 
+
+We combine all services and design HA/FT networks with sample application.. 
+
+Security Service : CLoudtrail, Config, Inspector, ACM, WAF..
+Application Services : SQS, SNS, SES, ECS, Pinpoint, Workspace, Directory services.. 
+DevOps : (Free Course) : CICD : COdepipeline,.. 
+Whitwpapers Overview, Certifications, Share sample resumes..  
+
+How we can design and deliver... Involved with Prog
+Lambda : Python, node.js, go, .netcore..
+Cloudformation : JSON/YAML
+
+CloudEndure : Any server/client --> AWS 
+SMS : On-Prem to AWS : Azure/VMWare/hyper-V : roles/cli : We can migrate
+DMS : RDS : 
+Snowball : 
+
+
+2003 : Whitepapers : Chris Pinkman and Benjamin black : SQS : 
+2004 : 
+2006 : AWS officially announced : S3, ec2, SQS.. 
+2010 : 
+2012 : AWS Annual conference : Re-Invent : Nov-Dec, Los Vegas.. 
+
+Amazon : Jeff bejos
+AWS CEO : Andy Jessy
+
+
+AWS Free Tier Eligibility : 12 Month free tier to get hands-on experience/ Try the services:
+
+Free Tier Dashboard : TO track the usage and forecast..
+ 
+S3 : 5 Gb Standard Storage : 
+Ec2 : 
+	Windows : 750 Hours/Month, t2.micro.. 1 server = 31 days.. 
+	Linux : 750 Hours/Month, t2.micro.. 1 server = 31 days..
+
+RDS : 750Hrs/Month, db.t2.micro.. 20GB Database Storage..
+DyanamoDB : 25GB Database.. Lifetime..
+
+Alarms : Configure billings.. 
+
+---------------
+
+AWS Account Creation : 
+
+https://aws.amazon.com/free
+--> Email : root User.. 
+--> Password , Confirm the Password
+--> Account Name : Name
+
+Provide Contact Information : 
+--> Professional / Personal Account : Personal Account
+--> Name, Address,
+
+
+identity verification:
+--> Phone : Give Ph Number,   XXXX --> Answer the call and enter 4 digit pin in that.. 
+--> Email : Email --> Code --> Enter that code.. 
+
+Payment Information :
+--> CC/DC
+--> Visa/ Master Card / Amex
+--> Validate the card status.. 2 INR / 1$ USD.. Refund.. 
+
+Choose a Support Plan : *Certification Exam
+
+--> Basic Support Plan 
+
+Review and SIgnup
+
+
+ENable MFA : 
+
+IAM : 
+
+________________________________________________________________________________________
+
+D: 22/05/2020
+
+1). Account and Billing related : Free for all support plans, 24x7 support
+2). Service Limit Increase : Free for all support plans, 24x7 support
+3). Technical Support : Depends on AWS account Support Plan..?? 
+
+Business Critical system : < 15 minutes
+Production System Down : < 1 hour
+Production impaired : < 4 hours
+System impaired : < 12 hours
+General guidelines : <24 hours
+
+Basic SP : Free, 1 & 2.. 3--> No Technical Support.. Trusted Advisor : 7 core checks.. 
+
+Developer SP : 30$/Month, 12-24 Local business hours, Email support.. Unlimited tickets..  		1 Primary Contct, Trusted Advisor : 7 core checks.. 
+
+Business SP : 100$/Month, 24x7 phone, email & chat support--> Cloud Support Engineer.. Unlimited cases, Any user can raise ticket.. 1 hour.. Trusted Advisor : Full checks..
+
+Enterprise SP : 15,000$/Month, 24x7 phone, email & chat support--> Cloud Support Engineer.. Unlimited cases, Any user can raise ticket.. <15 Minutes.. TAM (technical Account Manager) allocated to our AWS account.. Conceirge support team.. Trusted Advisor : Full checks..
+
+________________________________
+
+AWS Global Infrastructure : 
+
+Regions : No Technical defination for region.. Geographical / Physical location.. 24 Regions..    20 We can see from console : 
+
+2 regions = Us-Gov-Cloud
+2 Regions = China ()
+
+Every Region contains Min of 2 AZs.. 
+
+Availability Zones/AZs : Data Centre / COmbination of Multiple DCs.. Designed to isolate the resource failures.. 76 AZs.. 
+
+PoP (point of Presence) / Edge Location : CDN endpoints (Content Delivery network).. Cache locations.. 216 PoP locations.. "CloudFront"
+
+Latency : Response.. 
+tracert : windows 
+traceroute : Linux
+
+
+We can utilise AWS Professional services and APN (Amazon partner Network) if we required any assistance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
