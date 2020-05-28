@@ -83,6 +83,44 @@ Standard retrieval : Typically within 3 - 5 hours
 Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
 
 
+_____________________________________________________________________________________
+
+D: 28/05/2020
+
+Versioning : 
+--> Defaultly, Suspended state, We can enable. 
+--> It's a backup option on our s3 buckets.
+--> We can track all the changes happening on our objects.
+
+--> Whenver  Version: HIDE, If we delete any object, we will get  delete marker.
+	If we want to get the object back, Delete the DELETE MARKER.
+
+--> Whener Version : SHOW, if we delete any object, we won;t get Delete marker. Object deletes perminantly. 
+
+
+SRR / CRR :
+
+Replication Time Control replicates 99.99% of your new objects within 15 minutes.
+
+Task : Test the SRR.. Replicate data from Mumbai region bucket 1 --> Bucket 2.. and test the Priority on s3 buckets.
+
+LCR : Luife Cycle Management rule
+
+Object Lock : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
