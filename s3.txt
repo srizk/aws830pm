@@ -104,18 +104,62 @@ Replication Time Control replicates 99.99% of your new objects within 15 minutes
 
 Task : Test the SRR.. Replicate data from Mumbai region bucket 1 --> Bucket 2.. and test the Priority on s3 buckets.
 
-LCR : Luife Cycle Management rule
+LCR : Life Cycle Management rule
 
-Object Lock : 
+________________________________________________________________________________________
+
+D: 29/05/2020
+
+Server access logging : :ogging option on our s3 bucket. THis logs enables/applicable to only this bucket. If we want to enable logging for entire s3 platform, we can use a service called "Cloudtrail".
+
+Static website hosting: 
+Bucket name = Domain Name
+--> FOr our website also 99.99% availabi.
+--> Performance: 3500 Write/Sec, 5500 Read/Sec..
+--> http://bucketname.s3-website.region.amazonaws.com
+--> Static website data , needs to have atleast read only permissions for everyone.
+
+http Status Codes:
+
+2XX --> Success/OK
+3XX --> Redirection error
+4XX --> Client side error
+5xx --> Server Side error
+
+S3 :
+
+--> In-Transit Encryption
+	--> SSL / TLS Enabled
+
+--> Server Side Encryption (SSE) / At-Rest
+	--> SSE - S3 (S3 Managed Key) : Whoever have permission on s3 , they can view.
+	--> SSE - KMS (aws/s3) DMK / CMK
+	--> SSE - C (Customer Provided)
+
+--> Client Side Encryption
+	--> AWS not responsible for this.
+	--> If you never want to send any unencrypted data to s3. 
 
 
+KMS : Key Management Service..  : 
+
+CMK: Customer Master Key.. 
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations.
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations.
+
+Customer managed keys : THIS WILL NOT COMES UNDER FREE TIER ELIGIBILITY..!!!
 
 
+KMS : KMS Managed key.. KMS Rorates the key material.. 
+KMS - C : KMS with Customer Provided Key .. Customer need to rotate the key material.. 
+
+Key administrators: Who can administrate.. WHo can allocate permissions to another Users/services.. : Avinash_T
+
+key usage permissions: WHo can use this key.. : Avinash_T
 
 
-
-
-
+DMK : aws/s3: Default master key that protects my S3 objects when no other key is defined
 
 
 
