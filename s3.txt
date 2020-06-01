@@ -162,6 +162,53 @@ key usage permissions: WHo can use this key.. : Avinash_T
 DMK : aws/s3: Default master key that protects my S3 objects when no other key is defined
 
 
+________________________________________________________________________________________
+
+D: 01/06/2020
+
+
+Object Lock: 
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+Key and Value pairs
+Application : BigData
+Owner / POC : Avinash
+Cost Centre : XXXXX
+
+
+Transfer acceleration : We can use Edge location to Perform upload/download the data to this S3 bucket.
+
+Events : 
+--> SQS Queue
+--> Lambda Function
+--> SNS Topic ==>> 
+
+SNS : Simple Notification Service : 
+--> We can create a TOPIC and we can add subscribers.. 
+
+Storage class analysis : Analyzes your access patterns and suggests a candidate age to transition objects to Standard - IA for a lifecycle rule.
+
+Metrics : Provides graphical information about out s3 bucket.
+
+
+Task : Configure events on s3 bucket.
+Task : Try with "Object Lock" option.
+
+Life Lycle Management Rule
+SRR / CRR :
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
