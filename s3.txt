@@ -198,6 +198,67 @@ Task : Try with "Object Lock" option.
 Life Lycle Management Rule
 SRR / CRR :
 
+_______________________________________________________________________________________
+
+D: 02/06/2020
+
+IAM User : S3FullAccess.. OneBucket--> PUT/DELETE Object
+
+
+Effect : ALLOW / DENY
+Principal : TO WHom : IAM / IAM Group
+Actions : What you want to take effect : PUT / DELETE OBJECT
+ARN (Amazon Resource Name): On what resource you aplly this.. Bucket
+
+arn:aws:iam::518084852393:user/anudeep
+
+Bucket Level : arn:aws:s3:::avinash2
+Object Level : arn:aws:s3:::avinash2/*
+
+
+CORS Cross Origin Resource Sharing: 
+
+How to Manage S3 With 3rd Party appliction.?
+--> S3 Browser
+--> CloudBerry Explorer
+--> Cyberduck
+--> WinSCP
+
+Import / Export : 
+
+Create a Job.. 
+
+--> Snowball : 80TB.. 200$/Job.. 7 Days free..
+--> Snowball Edge : 100 TB.. 250$/job.. 7 Days free..
+--> Snowmobile : PB Scale container.. 
+
+1 gbps , 1 PB = 20-25 years.. 3 Months .. 
+
+
+AWS Direct Connect : Dedicated connectivity between On-Prem to AWS AZs.. Physical fiber connectivity.. 
+--> Doesn't required internet to access aws resources..!!
+Months to establish connectivity.. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
