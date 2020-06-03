@@ -1,0 +1,63 @@
+EC2 : Elastic 	Compute 					Cloud 
+		vCPU, Memory, Storage, Network
+
+server = Box = Instance = VMWare = Azure VM = GCP Engine
+Terminate = Delete
+
+On-Demand EC2 Instance : No specific workload / usecases.. Shortterm usage.. 
+	Pricing : /Sec Basis (Min 60 Sec).. /hr basis.. 
+
+Reserved ec2 instances (RI) : Stable workloads.. Longterm usage.. Contract 1 Yr / 3 yrs..
+
+	Standard RI : We cannot change the configuration.. 
+	Convertable RI : We can change the configuration.. 
+	Scheduled RI : repeated durations
+
+	Pricing :	Full Upfront : Pay 100% and get your instance..
+			Partial upfront : Need to 30-60%.. reduce instance hrly price.. 
+					   With reduced price, need to pay monthly basis
+			No Upfront : Pay everything monthly basis..
+
+
+Spot Instances : Flexible start/stop for our instance.. We need to BID the Pricing against AWS pricing.. 
+--> We can get high configured servers at low cost..
+--> Spot fleet request (Max Pricing)
+--> Pricing history
+
+==> You bid 0.50$/hr..  after 1 hr 30 Min.. 
+	--> Price not increase, you terminated insatnce : 1 hr 30 Min.. : 1$
+	--> Price increased by AWS, AWS Terminated insatnce : 1 hr : 0.50$
+
+FreeTier : 750 Hours per month, t2.micro (1 vCPU, 1 RAM) , WIndows instance.. 
+	750 Hours per month, t2.micro (1 vCPU, 1 RAM) , Linux instance..
+
+
+AWS Marketplace : Where can buy/sell our customized appliations.. 
+
+
+Instance isolation diagram
+--> Tenancy:
+	--> Shared tenancy / Default tenancy
+	--> Dedicated tenancy : Underlying h/w will not share with any other aws cust.
+		--> Dedicated instance : Small COnfig..
+		--> Dedicated Host : High config to run multiple instances, More 		transparancy on CPU core level.. we can apply CPU level licenses also
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
