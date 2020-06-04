@@ -42,6 +42,97 @@ Instance isolation diagram
 		--> Dedicated instance : Small COnfig..
 		--> Dedicated Host : High config to run multiple instances, More 		transparancy on CPU core level.. we can apply CPU level licenses also
 
+_____________________________________________________________________________________
+
+D: 04/06/2020
+
+Choose two regions to perform all the tasks/activities..!!
+--> Mumbai
+--> NV		(billing region - 6 AZs)
+
+How to Launch a Windows ec2 instance.!! 
+
+Step 1 : Choose an AMI (Amazon Machine Image)  : Windows Server 2016 
+
+An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance.
+
+Step 2 : Choose the instance configuration (vCPU, Memory, Network Performance)
+
+General purpose : Stable performance 	: t2, t3, m4, m5
+Compute optimized : More CPU power 	: c4, c5, c5d, c5n
+GPU Instance : Graphic performance	: P2, g4dn
+Memory Optimized : More RAM perf	: r4, r5, r5d, r5ad
+Storag oprimized : Best Disk perf	: d2, i2, i3
+FPGA : Field programable gateway array: f1
+ML ASIC : inf1
+
+t2.micro (1 vCPU, 1 RAM) : Free Tier Eligible.. 
+
+c5.large	: 
+c5.2xlarge	: 
+m5.xlarge	: 
+
+
+Step 3: Configure Instance Details
+
+No of Instance : 1
+Shutdown behavior : STOP  / TERMINATE	: STOP
+	What will happen when we shutdown instance from OS level : 
+Enable termination protection : YES  (Secure from Accidental terminations)
+
+Step 4: Add Storage : 30GB 
+
+Step 5: Add Tags 
+	--> max 50 tags/ instance
+
+Step 6: Configure Security Group
+
+Protocols to perform specific operations/ Every protocol uses a port number.. 
+
+Windows : RDP (Remote desktop protocol) : 3389
+Linux : SSH (Secure Shell) : 22
+http: 80
+https : 443
+Mssql : 1433
+mysql : 3306
+
+RDP : TCP : 3389 : 0.0.0.0/0 ==> Everyone / anywhere
+
+Step 7: Review Instance Launch with a KeyPair.
+
+KeyPair : Works with Public Key and private Key mechanism (Encryption and Descryption).. 
+
+Public Key = AWS Holds and it stores in the ec2 instance
+Private Key = Given to us.. We need to browse this Privatekey against our ec2 instance to 		get the default password. (.pem format)
+
+
+Public IP: Unique across the globe.. 
+
+We need an application : RDP tool: WIndows OS defaultly avialble. 
+
+Open "RUN" --> MSTSC (MicroSoft Terminal Services CLient) --> enter
+
+
+Task 1 : Launch a WIndows ec2 instance and login with Keypair provided password.
+--> Now change the "Administrator" password, close the session.. Try to login Using the keypair generated password..   Able to login with kP pwd or custom pwd..??
+
+Task 2 : Crete another user "yourname", provide valid "Local Admin Rights" and "Remote connectivity" permissions and try to login as that user to ec2 instance. 
+
+Task 3: Try to make your instance as webserver..!!
+
+
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-ee98fole-ThLu2xoWAVtUhhvoQPl~bA
+
+
+
+
+
+
+
+
+
+
 
 
 
