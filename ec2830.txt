@@ -137,9 +137,67 @@ GIT :
 https://www.udemy.com/course/gitbyavinash/?couponCode=JUNEAVI
 
 
+______________________________________________________________________________________
+
+D: 05/06/2020
+
+Windows Instance : RDP : 3389
+
+--> Using Security Groups, we cannot deny the traffic. Only we can allow.
+
+Source : 
+MYIP : CUrrently connected network users can connect to this instance.!
+Custom : We can provide the network IP addreses.
+Anywhere : You can connect to instance from anywhere. 
+
+ssh : MyIP/Custom
+RDP : MyIP/Custom
+
+http: 80 : 0.0.0.0/0
+https: 443 : 0.0.0.0/0
+
+NACLs : VPC : using NACLs we can deny the traffic..
 
 
+after installing IIS, We will get a folder C:\inetpub\wwwroot\ place all your webpages.
 
+We need to verify the Security Groups..!!!!
+webserver : uses http and https protocol to websites..
+
+Inbound : Whatever the traffic you want to deliver from your ec2 instance... 
+Outbound : Whatever the traffic you want to access within ec2 instance.. 
+
+--> changes to the SG takes effect immediately. 
+--> Security groups are stateful, We need to takes care about the inbound rules only. 
+
+
+How to connect to a Linux Instance..??
+
+Step 1: Choose an Amazon Machine Image (AMI) : Amazon Linux 2 AMI 
+
+Centos, RedHat = Amazon Linux 2..!!
+
+
+Windows : Putty :
+Putty Dont support .PEM format keypairs, Putty .ppk format..  
+
+Amazon Linux : ec2-user
+redhat : redhat / ec2-user
+ubuntu : ubuntu
+
+
+Terminal / cmd : ssh -i keypair.pem ec2-user@publicip
+
+If we want to use windows command prompt to connect Linux instances, we need to install Openssh in our windows.. 
+
+
+Task : Launch a windows instance, make it as a webserver and deliver the custom webpage. (try to explore SG Source options)
+
+Task 2 : Launch a Linux ec2 instance, and connect using local command prompt / GIT.
+
+Convert the .PEM file to .ppk file using PuttyGen and try to connect to same linux instance using putty application.. 
+
+Task 3 : try "MobaXterm" application.
 
 
 
