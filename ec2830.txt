@@ -199,7 +199,57 @@ Convert the .PEM file to .ppk file using PuttyGen and try to connect to same lin
 
 Task 3 : try "MobaXterm" application.
 
+______________________________________________________________________________________
 
+D: 06/06/2020
+
+==> Add Storage
+
+For root volume: gp2, io1, magnetic.. 
+Additional volumes: sc1, st1
+
+
+HDD/SDD perf we measure with IOPS : Input and Output per second.. 
+
+general Purpose SSD: gp2 : Balance for price and performance, Most commonly used.. Boot VOlumes, apps/dev/test... Min: 1 Gb, Max: 16 TB... Max IOPS : 16,000.. But if we need more than 10k, we don't use this.. 
+Default ratio : 1 GB = 3 IOPS.. Min of 100.. 
+
+Provisioned IOPS SSD : io1 : Highest perf SSD.. Prod environment.. I/O intensive databases / relationsal database if you want to run from ec2 instance.. IOPS: 32,00 for all regular instances..  For Nitro instances Max: 64,000.. Min: 4 gb, Max: 16 TB.. 
+Default ratio : 1 GB = 50 IOPS.. But we can choose/sepcify required IOPS count.. 
+
+Magnetic : standard : Lowest perf, lowest cost.. For less freq accessed server.. IOPS N/A.. Min: 1 GB, Max: 1 TB... 
+
+root = OS runs in this Volume.. 
+
+Throughput oprimized HDD : st1 : Designed for Freq acceesed, throughput intensive applications.. (BigData, Data warehousing, Log processing).. Min: 500 GB, Max: 16 TB..
+
+Cold HDD : sc1 : Designed for Less Freq acceesed, Lowest cost.. Min: 500 GB, Max: 16 TB..
+Colder data which required only fewer scans per day.. 
+
+
+--> Whenever we create and associate a volume to ec2 instance, Volume creates with RAW partition.. 
+
+WIndows : fat, fat32, ntfs, ReFS.. 
+Linux: ext3, ext4, xfs.. 
+
+
+Snapshots: Snapshots are backup copies of our EBS volumes.. These backup copies allow us to create a volume in any AZ in same region...
+--> AWS uses "AWS Owned s3" platform to store these snapshots. 
+
+==> We can create a copy and associate to another AZ instance.
+==> We can copy the snapshot to another region also.
+==> We can share this snapshot to another AWS account.
+==> We can even make it public.. 
+
+
+Task : Launch an ec2 instance "ap-south-1a" with 30 gb, Increase that 30 gb to 31 gb and make it available..
+
+Task 2 : Create a new volume in "ap-south-1a" , and associate and make it avilable.
+
+Task 3 : launch an ec2 instance in "ap-south-1b".. Get the task 2 volume copy to this instance using snapshot mechanism.
+
+
+  
 
 
 
